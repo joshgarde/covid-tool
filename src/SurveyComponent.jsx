@@ -51,30 +51,8 @@ class SurveyComponent extends Component {
               {
                 "type": "text",
                 "name": "last_name",
-                "startWithNewLine": false,
                 "title": "Last name",
                 "isRequired": true
-              },
-              {
-                "type": "radiogroup",
-                "name": "case_identifier_information_sex",
-                "startWithNewLine": false,
-                "title": "Sex",
-                "isRequired": true,
-                "choices": [{
-                    "value": "item1",
-                    "text": "Male"
-                  },
-                  {
-                    "value": "item2",
-                    "text": "Female"
-                  },
-                  {
-                    "value": "item3",
-                    "text": "Other/Not known"
-                  }
-                ],
-                "colCount": 3
               },
               {
                 "type": "panel",
@@ -86,169 +64,9 @@ class SurveyComponent extends Component {
                     "titleLocation": "hidden",
                     "inputType": "date",
                     "isRequired": true
-                  },
-
-                  /*
-                  {
-                    "type": "checkbox",
-                    "name": "case_identifier_information_patient_date_of_birth_checkbox",
-                    "startWithNewLine": false,
-                    "titleLocation": "hidden",
-                    "choices": [
-                      "Unknown"
-                    ]
                   }
-                  */
                 ],
                 "title": "Date of Birth"
-              },
-              // Phone # Snippet
-              /*
-              {
-                "type": "text",
-                "name": "case_identifier_information_patient_telephone_mobile_number",
-                "title": "Telephone (mobile) number",
-                "inputType": "tel"
-              },
-              */
-
-              {
-                "type": "panel",
-                "name": "case_identifier_information_patient_age",
-                "elements": [{
-                    "type": "text",
-                    "name": "case_identifier_information_patient_age_years",
-                    "visibleIf": "{case_identifier_information_patient_age_checkbox} empty",
-                    "title": "Years:",
-                    "titleLocation": "left",
-                    "inputType": "number",
-                    "isRequired": true
-                  },
-                  {
-                    "type": "text",
-                    "name": "case_identifier_information_patient_age_months",
-                    "visibleIf": "{case_identifier_information_patient_age_checkbox} empty",
-                    "startWithNewLine": false,
-                    "title": "Months:",
-                    "titleLocation": "left",
-                    "inputType": "number",
-                    "isRequired": true,
-                  },
-
-                  /*
-                  {
-                    "type": "checkbox",
-                    "name": "case_identifier_information_patient_age_checkbox",
-                    "startWithNewLine": false,
-                    "titleLocation": "hidden",
-                    "choices": [
-                      "Unknown"
-                    ]
-                  }
-                  */
-                ],
-                "title": "Age (years, months) "
-              },
-
-              // Race/Ethnicity snippet
-              {
-                "type": "dropdown",
-                "name": "case_identifier_information_patient_race",
-                "title": "What is your race/ethnicity?",
-                "isRequired": true,
-                "choices": [
-                  "American Indian or Alaska Native",
-                  "Asian",
-                  "Black or African American",
-                  "Hispanic",
-                  "Native Hawaiian or Other Pacific Islander",
-                  "Non-Hispanic White",
-                  "Other"
-                ],
-                // Choice by url
-                /*
-                "choicesByUrl": {
-                  "url": "https://developer.uat.usajobs.gov/API-Reference/GET-codelist-ethnicity",
-                  "valueName": "name"
-                }
-                */
-              },
-
-
-              // Height snippet
-              {
-                "type": "text",
-                "name": "case_identifier_information_patient_height",
-                "title": "What is your height in cm?",
-                "inputType": "text",
-                "isRequired": true
-              },
-
-              // Weight Snippet
-              {
-                "type": "text",
-                "name": "case_identifier_information_patient_weight",
-                "startWithNewLine": false,
-                "title": "What is your weight in pounds(lbs)?",
-                "inputType": "text",
-                "isRequired": true,
-              },
-
-              // Email snippet
-              /*
-              {
-                "type": "text",
-                "name": "case_identifier_information_patient_email",
-                "title": "Email",
-                "inputType": "email"
-              },
-              */
-
-              // Address Snippet
-              /*
-              {
-                "type": "text",
-                "name": "case_identifier_information_patient_address",
-                "startWithNewLine": false,
-                "title": "Address"
-              },
-              */
-
-              // identifier Snippet
-              /*
-              {
-                "type": "text",
-                "name": "case_identifier_information_patient_national_social_number",
-                "startWithNewLine": false,
-                "title": "National social number/ identifier (if applicable)"
-              },
-              */
-
-              // Residence Snippet
-              {
-                "type": "dropdown",
-                "name": "case_identifier_information_patient_country_of_residence",
-                "title": "Country of residence",
-                "isRequired": true,
-                "choices": [
-                  "item1",
-                  "item2",
-                  "item3"
-                ],
-                "choicesByUrl": {
-                  "url": "https://restcountries.eu/rest/v2/all",
-                  "valueName": "name"
-                }
-              },
-
-              // Zipcode Snippet
-              {
-                "type": "text",
-                "name": "case_identifier_information_patient_zip",
-                "startWithNewLine": false,
-                "title": "What is your zipcode?",
-                "inputType": "text",
-                "isRequired": true
               },
 
               // Smoked question
@@ -261,31 +79,6 @@ class SurveyComponent extends Component {
                 "labelFalse": "No",
                 "hideNumber": true
               },
-
-              // Case status snippet
-              {
-                "type": "radiogroup",
-                "name": "case_identifier_information_patient_case_status",
-                //"startWithNewLine": false,
-                "title": "Case status",
-                "isRequired": true,
-                "choices": [{
-                    "value": "item1",
-                    "text": "Suspected"
-                  },
-                  {
-                    "value": "item2",
-                    "text": "Probable"
-                  },
-                  {
-                    "value": "item3",
-                    "text": "Confirmed"
-                  }
-                ],
-                "colCount": 3
-
-
-              }
             ],
             "startWithNewLine": false
           }]
