@@ -459,21 +459,21 @@ class App extends Component {
     let error = false;
     let errors = this.state.errors;
 
-    if (age < 18 || age > 100) {
+    if (age < 18 || age > 100 || isNaN(age)) {
       errors['age'] = 'Age should be between 18-100';
       error = true;
     } else {
       delete errors['age'];
     }
 
-    if (temperature < 33.5 || temperature > 39.6) {
+    if (temperature < 33.5 || temperature > 39.6 || isNaN(temperature)) {
       errors['temperature'] = 'Temperature should be between 33.5-39.6';
       error = true;
     } else {
       delete errors['temperature'];
     }
 
-    if (pulse < 35 || pulse > 160) {
+    if (pulse < 35 || pulse > 160 || isNaN(pulse)) {
       errors['pulse'] = 'Pulse should be between 35-160';
       error = true;
     } else {
